@@ -45,6 +45,8 @@ def clean_pocket(f_out):
 
     pocketUnreadLinksListClean = [process_link(i, 'pocket', False) for i in pocketUnreadLinksList]
     pocketReadLinksListClean = [process_link(i, 'pocket', True) for i in pocketReadLinksList]
+    for i in pocketReadLinksListClean:
+        i['date_read'] = i['date_saved']
 
     pocketLinksListClean = pocketUnreadLinksListClean + pocketReadLinksListClean
     write_json(pocketLinksListClean, f_out)
