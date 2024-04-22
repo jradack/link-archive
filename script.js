@@ -57,19 +57,7 @@ data.map((e, i) => addItem(e, i));
 // For sorting in different cases 
 function sortItems(title) {
     remove();
-    switch (title) {
-        case "name":
-            sortName();
-            break;
-        case "category":
-            sortCat();
-            break;
-        case "year":
-            sortYear();
-            break;
-        default:
-            console.log("Default");
-    }
+    sortStringCol(title);
     data.map((e, i) => addItem(e, i));
 }
 
@@ -79,18 +67,21 @@ function remove() {
     while (table.rows.length > 1) table.deleteRow(-1);
 }
 
-// Sort text column
-function sortText() {
-
-}
-
-// Sort with names 
-function sortName() {
+// Sort for string columns
+function sortStringCol(colName) {
     data.sort((a, b) => {
-        let fa = a.Name.toLowerCase(),
-            fb = b.Name.toLowerCase();
+        let fa = (a == null) ? null : a[colName].toLowerCase();
+        let fb = (b == null) ? null : b[colName].toLowerCase();
+        // let fa = a[colName].toLowerCase(),
+        //     fb = b[colName].toLowerCase();
         console.log(fa, fb);
 
+        if(fa == null) {
+            return 1;
+        }
+        if(fb == null) {
+            return -1;
+        }
         if (fa < fb) {
             return -1;
         }
@@ -99,34 +90,8 @@ function sortName() {
         }
         return 0;
     });
-    if (flag.Name) data.reverse();
-    flag.Name = !flag.Name;
-}
-
-// Sort with categories 
-function sortCat() {
-    data.sort((a, b) => {
-        let fa = a.Cat.toLowerCase(),
-            fb = b.Cat.toLowerCase();
-        console.log(fa, fb);
-
-        if (fa < fb) {
-            return -1;
-        }
-        if (fa > fb) {
-            return 1;
-        }
-        return 0;
-    });
-    if (flag.Cat) data.reverse();
-    flag.Cat = !flag.Cat;
-}
-
-// Sort with year 
-function sortYear() {
-    data.sort((a, b) => a.Year - b.Year);
-    if (flag.Year) data.reverse();
-    flag.Year = !flag.Year;
+    if (flag[colName]) data.reverse();
+    flag[colName] = !flag[colName];
 }
 
 // To search and filter items 
