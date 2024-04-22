@@ -5,14 +5,16 @@ let index = -1;
 const table = document.getElementById("table");
 
 // For sorting ascending or descending 
-const flag = { Name: false, Cat: false, Year: false };
-let data = [
-    { Name: "HTML", Cat: "Web", Year: "1993", Type: "ABC" },
-    { Name: "Java", Cat: "Programming", Year: "1995", Type: "ABC" },
-    { Name: "JavaScript", Cat: "Web", Year: "1995", Type: "DEC" },
-    { Name: "MongoDB", Cat: "Database", Year: "2007", Type: "KJL" },
-    { Name: "Python", Cat: "Programming", Year: "1991", Type: "AAA" },
-];
+// const flag = { Name: false, Cat: false, Year: false };
+// let data = [
+//     { Name: "HTML", Cat: "Web", Year: "1993", Type: "ABC" },
+//     { Name: "Java", Cat: "Programming", Year: "1995", Type: "ABC" },
+//     { Name: "JavaScript", Cat: "Web", Year: "1995", Type: "DEC" },
+//     { Name: "MongoDB", Cat: "Database", Year: "2007", Type: "KJL" },
+//     { Name: "Python", Cat: "Programming", Year: "1991", Type: "AAA" },
+// ];
+const flag = { name: false, date_saved: false, date_read: false };
+let data = linksData;
 
 // To switch update or add form 
 const switchEdit = () => {
