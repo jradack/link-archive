@@ -186,10 +186,3 @@ function submitItem() {
     console.log(data);
 }
 
-// Delete specific field 
-function del(el) {
-    console.log("del clicked", el);
-    remove();
-    data = data.filter((e) => e.Name !== el.Name);
-    data.map((e, i) => addItem(e, i));
-}
