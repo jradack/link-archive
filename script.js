@@ -36,19 +36,11 @@ function addItem(e, i) {
     let c2 = row.insertCell(2);
     let c3 = row.insertCell(3);
     let c4 = row.insertCell(4);
-    let c5 = row.insertCell(5);
-    let c6 = row.insertCell(6);
     c0.innerText = i + 1;
-    c1.innerText = e.Name;
-    c2.innerText = e.Cat;
-    c3.innerText = e.Year;
-    c4.innerText = e.Type;
-    c5.innerHTML = "";
-    c6.innerHTML = "☒";
-    c5.classList.add("zoom");
-    c6.classList.add("zoom");
-    c5.addEventListener("click", () => edit(c5, i));
-    c6.addEventListener("click", () => del(e));
+    c1.innerText = e.name;
+    c2.innerText = e.date_saved;
+    c3.innerText = e.date_read;
+    c4.innerText = e.tags;
 }
 
 // Traverse and insert items to table 
