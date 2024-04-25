@@ -91,9 +91,9 @@ function searchItems() {
         .value.toLowerCase();
     let filterItems = data.filter((e) => {
         return (
-            e.Name.toLowerCase().includes(input) ||
-            e.Cat.toLowerCase().includes(input) ||
-            e.Year.includes(input)
+            e.name.toLowerCase().includes(input) ||
+            e.date_saved.toLowerCase().includes(input) ||
+            e.tags.join().toLowerCase().includes(input)
         );
     });
 
