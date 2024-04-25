@@ -4,7 +4,10 @@ This project creates a simple html page for organizing and navigating an archive
 
 
 # To Do
-[] Add links for original and archive URLs to table
-[] Dealing with sorting a null value
-[] Adjust table width
-[] Add favorite tag to pocket favorited links
+
+- Toggle articles that are read, unread or both
+- Adjust table width
+- Add favorite tag to pocket favorited links
+- Ability to search and sort at the same time
+- Add table pagination
+- Table of tags with number of articles, clicking on it will show all the links with that tag
