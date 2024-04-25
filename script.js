@@ -68,18 +68,10 @@ function remove() {
 // Sort for string columns
 function sortStringCol(colName) {
     data.sort((a, b) => {
-        let fa = (a == null) ? null : a[colName].toLowerCase();
-        let fb = (b == null) ? null : b[colName].toLowerCase();
-        // let fa = a[colName].toLowerCase(),
-        //     fb = b[colName].toLowerCase();
-        console.log(fa, fb);
+        let fa = a[colName].toLowerCase(),
+            fb = b[colName].toLowerCase();
+        // console.log(fa, fb);
 
-        if(fa == null) {
-            return 1;
-        }
-        if(fb == null) {
-            return -1;
-        }
         if (fa < fb) {
             return -1;
         }
