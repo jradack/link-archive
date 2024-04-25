@@ -25,40 +25,6 @@ body {
 	margin-bottom: 12px;
 }
 
-.form {
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-	display: flexbox;
-	margin: 0 1rem;
-	padding: 1rem;
-	width: 98%;
-	font-size: 16px;
-	background-color: rgb(247, 246, 246);
-
-}
-
-.form>div {
-	width: 100%;
-}
-
-.form>button {
-	background-color: rgb(46, 171, 46);
-	padding: 1%;
-	border-radius: 5px;
-	width: 10%;
-	color: black;
-	border: 1px solid #ddd;
-
-}
-
-.form>input {
-	width: 25%;
-	margin: 2%;
-	font-size: 16px;
-	padding: 1%;
-	border: 1px solid #ddd;
-
-}
-
 #table {
 	border-collapse: collapse;
 	width: 100%;
