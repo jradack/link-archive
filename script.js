@@ -38,11 +38,15 @@ function addItem(e, i) {
     let c2 = row.insertCell(2);
     let c3 = row.insertCell(3);
     let c4 = row.insertCell(4);
-    c0.innerText = i + 1;
-    c1.innerText = e.name;
+    c0.innerText = e.name;
+    if (e.archive_link == null) {
+        c1.innerHTML = "".concat("<a href=\"", e.original_url, "\">Original</a> | Archive");
+    } else {
+        c1.innerHTML = "".concat("<a href=\"", e.original_url, "\">Original</a> | <a href=\"", e.archive_link, "\">Archive</a>");
+    }
     c2.innerText = e.date_saved;
     c3.innerText = e.date_read;
-    c4.innerText = e.tags;
+    c4.innerText = e.tags.join(", ");
 }
 
 // Traverse and insert items to table 
